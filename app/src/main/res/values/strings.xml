@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Valar Assignment</string>
+
+    <!-- Common Strings -->
+    <string name="something_went_wrong">Oh no, something went wrong!</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading…</string>
+    <string name="failed_to_connect_with_server">Failed to connect with server!</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="no_valid_url_available">No valid URL available</string>
+    <string name="released">Released:</string>
+
+    <string name="no_movies_found">No Movie Found</string>
+
+    <!-- Details Screen -->
+    <string name="genre">Genre: </string>
+    <string name="director">Director: </string>
+    <string name="writer">Writer: </string>
+    <string name="actors">Actors: </string>
+
+</resources>

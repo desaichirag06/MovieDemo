@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressBarColor">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/control_normal</item>
+        <item name="colorControlActivated">@color/control_activated</item>
+        <item name="colorControlHighlight">@color/control_highlight</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:layout_width">@dimen/_64sdp</item>
+        <item name="android:layout_height">@dimen/_64sdp</item>
+        <item name="android:rotation">-90</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="DialogWithAnimation" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/grow_out</item>
+    </style>
+
+    <style name="ProgressDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/control_normal</item>
+        <item name="colorControlActivated">@color/control_activated</item>
+        <item name="colorControlHighlight">@color/control_highlight</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="Theme.AppCompat.Light" />
+
+    <style name="CardViewStyle" parent="android:Widget.TextView">
+        <item name="android:foreground">@drawable/selector_bg_card</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+</resources>
