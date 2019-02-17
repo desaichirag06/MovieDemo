@@ -3,6 +3,7 @@ package com.chirag.valarassignment.ui.home;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 
 import com.chirag.valarassignment.R;
 import com.chirag.valarassignment.adapter.MovieListAdapter;
@@ -40,12 +41,21 @@ public class MainActivity extends BaseActivity {
 
         //API Calling
         API_GetMovieList();
+
+        mBinding.tvSearch.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                //API Calling
+                API_GetMovieList();
+                return true;
+            }
+            return false;
+        });
     }
 
     public void API_GetMovieList() {
 
         HashMap<String, String> params = new HashMap<>();
-        params.put("s", "star wars");
+        params.put("s", mBinding.tvSearch.getText().toString().isEmpty() ? "star wars" : mBinding.tvSearch.getText().toString());
         params.put("apikey", API_KEY);
         try {
             Retrofit.with(this)

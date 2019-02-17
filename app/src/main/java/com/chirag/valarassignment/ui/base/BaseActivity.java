@@ -1,11 +1,7 @@
 package com.chirag.valarassignment.ui.base;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,6 +26,7 @@ import android.widget.Toast;
 
 import com.chirag.valarassignment.R;
 import com.chirag.valarassignment.interfaces.OnSnackBarActionListener;
+import com.chirag.valarassignment.utils.SessionManager;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -290,32 +287,5 @@ public abstract class BaseActivity extends AppCompatActivity {
         public void onPermissionGranted(int requestCode);
 
         public void onPermissionDenied(int requestCode);
-    }
-
-    // Internet Connection
-    public void checkNetworkConnection() {
-        // Create an Alert Dialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        // Set the Alert Dialog Message
-        builder.setMessage("Internet Connection Required")
-                .setCancelable(false)
-                .setPositiveButton("Retry",
-                        (dialog, id) -> {
-                            // Restart the Activity
-                            Intent intent = getIntent();
-                            finish();
-                            startActivity(intent);
-                        });
-        AlertDialog alert = builder.create();
-        alert.show();
-
-    }
-
-    public boolean isNetworkAvailable() {
-        // Using ConnectivityManager to check for Network Connection
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager
-                .getActiveNetworkInfo();
-        return activeNetworkInfo != null;
     }
 }
